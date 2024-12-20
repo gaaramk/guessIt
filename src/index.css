@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Tajawal", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#1e293b] text-[#f9fafb] h-screen p-5 flex justify-center;
+  }
+  h1 {
+    @apply text-4xl font-bold text-[#f9f4da];
+  }
+  p {
+    @apply text-lg max-w-[500px];
+  }
+  main {
+    @apply w-[80%] mx-auto;
+  }
+}
+
+@layer components {
+  .head {
+    @apply flex justify-center items-center text-center w-[80%] mx-auto;
+  }
+  .gameSection{
+    @apply my-12;
+  }
+  .gameStatus {
+    @apply w-[90%] mx-auto bg-[#16A34A] flex flex-col items-center justify-center gap-1 p-3 my-12 rounded-lg text-center;
+  }
+  .gameStatus h2 {
+    @apply text-2xl font-bold text-[#f9f4da];
+  }
+  .gameStatus p {
+    @apply text-lg uppercase;
+  }
+  .peopleSection {
+    @apply w-[90%] mx-auto flex justify-center items-center flex-wrap gap-5 p-5 rounded-xl border-2 border-[#f9f4da];
+  }
+  .person {
+    @apply w-20 p-3 border border-[#f9f4da] rounded-lg flex flex-col justify-center items-center hover:text-black ease-in-out duration-300;
+  }
+  .person i {
+    @apply text-2xl;
+  }
+  .person h3 {
+    @apply text-lg capitalize;
+  }
+  .currentWord {
+    @apply w-[90%] mx-auto flex justify-center items-center my-12 gap-1 uppercase;
+  }
+  .letter {
+    @apply w-24 p-4 border-b-4 flex justify-center items-center text-4xl font-serif bg-[#323232]  hover:bg-[#f9f4da] hover:text-black hover:border-[#16A34A] ease-in-out duration-300;
+  }
+  .keyboard {
+    @apply w-[90%] mx-auto flex flex-wrap justify-center items-center gap-5 my-12;
+  }
+  .key {
+    @apply w-16 h-16 border border-[#f9f4da] rounded-lg flex justify-center items-center text-4xl hover:text-black hover:bg-[#f9f4da] ease-in-out duration-300;
+  }
+  .keyboard .correct {
+    @apply bg-[#16A34A];
+  }
+  .keyboard .wrong {
+    @apply bg-[#EF4444];
+  }
+
+  .reset {
+    @apply flex justify-center;
+  }
+  .reset button {
+    @apply w-[90%] p-3 mb-12 bg-[#16A34A] text-3xl rounded-lg hover:bg-blue-500 hover:text-black ease-in-out duration-300;
+  }
+
+  .lost {
+    @apply bg-red-700 !important;
+  }
+}
